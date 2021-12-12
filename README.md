@@ -34,13 +34,13 @@ class Solution {
         int index = 0;
         int[] result = new int[nums.length];
         for(int i = 0; i < nums.length; i++) {
-            int j = (i+1) % nums.length;
+            int j = (i+1) % nums.length; // Don't forget % nums.length
             while(j != i) {
                 if(nums[j] > nums[i]) {
                     result[index++] = nums[j];
                     break;
                 }
-                j = (j+1) % nums.length;
+                j = (j+1) % nums.length; // Don't forget % nums.length
             }
             if(j == i)
                 result[index++] = -1;
